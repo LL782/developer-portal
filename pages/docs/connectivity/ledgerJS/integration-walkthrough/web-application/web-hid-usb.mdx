@@ -13,7 +13,7 @@ The instructions for Web USB and Web HID are very similar, with only a few lines
 This application will connect to your Nano to display the address of a Bitcoin account. 
 You can easily modify the code, if you want it for Ethereum.
 
-Reference note: The packages used for each are  
+Reference note: the packages referenced here are     
  Web USB: [@ledgerhq/hw-transport-webusb](https://github.com/LedgerHQ/ledger-live/tree/develop/libs/ledgerjs/packages/hw-transport-webusb)  
  Web HID: [@ledgerhq/hw-transport-webhid](https://github.com/LedgerHQ/ledger-live/tree/develop/libs/ledgerjs/packages/hw-transport-webhid).
 
@@ -27,7 +27,7 @@ Make sure you go through the [Development Prerequisites](../../integration-walkt
 
 ### App setup
 
-For this tutorial, the folder will be named `example-web-hid-usb`, to accomdate for both Web USB and Web HID.  
+For this tutorial, the folder will be named `example-web-hid-usb`, so that it can be used for either Web USB or Web HID.
 
 From your `Github folder` or favourite `examples folder`, run:
 
@@ -52,7 +52,7 @@ touch src/index.html
 touch src/main.js
 ```
 
-Your folder must look like this.
+The folder will contain these files:  
 
 ![Folder USB and HID](/connectivity/folderUsbHid.png)
 *Fig. 1: File structure*
@@ -101,7 +101,7 @@ import TransportWebHID from "@ledgerhq/hw-transport-webhid";
 //---------------------------------
 
 //Display the header in the div which has the ID "main"
-const initial = "<h1>Connect your Nano and open the Bitcoin app. Click anywhere to start...</h1>";
+const initial = "<h2>Connect your your Ledger Device<br/><br/>and open the Bitcoin app. <br/><br/>Click anywhere to start</h2>";
 const $main = document.getElementById("main");
 $main.innerHTML = initial;
 
@@ -128,7 +128,7 @@ document.body.addEventListener("click", async () => {
     //Display your bitcoin address on the screen
     const h2 = document.createElement("h2");
     h2.textContent = bitcoinAddress;
-    $main.innerHTML = "<h1>Your first Bitcoin address:</h1>";
+    $main.innerHTML = "<h1>Congratulations!</h1><br/><h1>You are connected to your Ledger Device</h1><br/><h2>Your first Bitcoin address is:</h2>";
     $main.appendChild(h2);
 
     //Display the address on the Ledger device and ask the user to verify the address
@@ -299,12 +299,13 @@ Now you can click on the text and a popup will be prompt. Choose your Nano and c
 
 ### 5. Check displayed address
 
-Then if all goes well you must have the bitcoin address.
+The App gets the Bitcoin address and displays it.  
+Check that the address displayed on the App is the same as the one displayed on the Ledger device.
 
 ![Address Account Displayed](/connectivity/webapp3.png)
 *Fig. 8: Address Account Displayed*
 
-Congratulations, you have successfully built your first application connected with a Nano !
+Congratulations, you have successfully built your first application connected to a Nano!
 
 <Callout type="info" emoji="👉">
   Note that if your finalize the operation on your Nano by accepting or rejecting, the corresponding message appears on your web application.

@@ -55,7 +55,7 @@ touch src/index.html
 touch src/main.js
 ```
 
-Your folder must look like this: 
+The folder will contain these files:  
 
 ![Folder USB and HID](/connectivity/folderUsbHid.png)
 
@@ -109,7 +109,7 @@ import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
 // import TransportWebHID from "@ledgerhq/hw-transport-webhid";
 
 //Display the header in the div which has the ID "main"
-const initial = "<h1>Connect your Nano and open the Ethereum app. Click on “Hash my message”</h1>";
+const initial = "<h2>Connect your your Ledger Device<br/><br/>and open the Ethereum app. <br/><br/>Click on “Hash my message”</h2>";
 const $main = document.getElementById("main");
 $main.innerHTML = initial;
 
@@ -134,7 +134,7 @@ document.querySelector("#hashMessage").addEventListener("click", async () => {
    //Display your bitcoin address on the screen
    const h2 = document.createElement("h2");
    h2.textContent = signedHash;
-   $main.innerHTML = "<h1>Your signed message:</h1>";
+   $main.innerHTML = "<h1>Your signed message is:</h1>";
    $main.appendChild(h2);
 
    //Display the address on the Ledger device and ask to verify the address
