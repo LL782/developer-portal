@@ -9,8 +9,17 @@ body {
   font-family: 'InterRegular';
 }
 
+code {
+  font-family: 'cursive';
+}
+
 article a[target='_blank']:after {
     content: ' \21aa';
+}
+
+line_f {
+  line-height:100%0.8em;
+  font-family:cursive;
 }
 
 .center {
@@ -18,7 +27,6 @@ article a[target='_blank']:after {
   width: 30%;
   margin: auto;
 }
-
 
 
 /* CSS for Dev Journeys Genially */
