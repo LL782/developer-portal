@@ -13,7 +13,7 @@ This application will connect to your Ledger Nano X to display the address of yo
 
 <Callout type="info" emoji="ℹ️">
 **This walkthrough will only work with a Ledger Nano X**.  
-The Ledger Nano S and S Plus do not have the Bluetooth functionality. 
+The Ledger Nano S and S Plus do not have `Bluetooth` connectiion. 
 
 Please be aware that the Bluetooth implementation is only supported by a few browsers. <br/>
 You can check if [your browser supports](https://caniuse.com/web-bluetooth) connections via Web Bluetooth.
@@ -25,7 +25,7 @@ You can check if [your browser supports](https://caniuse.com/web-bluetooth) conn
 
 Make sure you go through the [Development Prerequisites](../../integration-walkthrough).
 
-This web application is build using React, which is a frontend Javascript framework.
+This web application is built with Next.js, which is a frontend React framework.
 
 ## App Coding
 
@@ -37,7 +37,22 @@ For this tutorial the project will be named “examples-web-bluetooth”.
 From your `Github folder` or favourite `examples folder`, run:
 
 ```console copy
-npx create-react-app examples-web-bluetooth
+npx create-next-app@latest examples-web-bluetooth
+```  
+
+You will prompted a series of questions, answer as indicated below:  
+
+```console copy
+Would you like to use TypeScript? No
+Would you like to use ESLint? No
+Would you like to use Tailwind CSS? No
+Would you like to use `src/`directory” No
+Would you like to use App Router? (recommended) › No
+Would you like to customize the default import alias (@/*)? No
+```
+
+Navigate to your app’s directory:
+```console copy
 cd examples-web-bluetooth
 ```
 
